@@ -1,0 +1,88 @@
+body{
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+}
+#box{
+    width: 75%;
+    margin: auto;
+}
+#titulo{
+    border-style: solid;
+    background-color: white
+}
+
+header{
+    text-align: center;
+    display: inline-block;
+    height: auto;
+    display: flex;
+}
+#letras{
+    width: 60%;
+    background-color: aqua;
+    text-align: right;
+    padding-right: 10px;
+}
+#logo{
+    width: 50%;
+    text-align: left;
+    background-color: aquamarine;
+    padding-bottom: 10px
+}
+nav{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+/* Style the buttons inside the tab */
+nav button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+nav button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+nav button.active {
+    background-color: #ccc;
+}
+.navContent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+#cuerpo{
+    border-style: solid;
+    display: inline-block;
+    height: auto;
+    display: flex;
+    background-color: red
+}
+#cambio{
+    width: 50%;
+    text-align: center;
+    background-color: red;
+}
+#canvas{
+    width: 50%;
+    background-color: #000;
+}
+footer{
+    margin: auto;
+    border-style: solid;
+    height: 50px;
+    background-color: green;
+}
