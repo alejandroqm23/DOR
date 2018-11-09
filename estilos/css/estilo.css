@@ -11,7 +11,8 @@ body{
 }
 #titulo{
     border-style: solid;
-    background-color: white
+    background-color: white;
+    font-family: cursive;
 }
 
 header{
@@ -22,20 +23,24 @@ header{
 }
 #letras{
     width: 60%;
-    background-color: aqua;
+    background-color: #19D4FF;
     text-align: right;
     padding-right: 10px;
 }
 #logo{
     width: 50%;
     text-align: left;
-    background-color: aquamarine;
+    background-color: #19D4FF;
     padding-bottom: 10px
+}
+#logo>img{
+    width:25%;
+    height:100%;
 }
 nav{
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border: 1px solid black;
+    background-color: #FFE800;
 }
 /* Style the buttons inside the tab */
 nav button {
@@ -47,42 +52,81 @@ nav button {
     padding: 10px 10px;
     transition: 0.3s;
     font-size: 17px;
+    font-family: cursive;
 }
 
 /* Change background color of buttons on hover */
 nav button:hover {
-    background-color: #ddd;
+    background-color: rgba(0, 0, 0, 0.486);
+    color: #FFE800;
 }
 
 /* Create an active/current tablink class */
 nav button.active {
-    background-color: #ccc;
+    background-color: black;
+    color: #FFE800;
 }
 .navContent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
     border-top: none;
+}
+.navContent>h3{
+    margin-bottom: -20px;
+    font-family: "Arial", serif;
+}
+.navContent>video{
+    width:320px;
+    height:240px;
+}
+.navContent>article{
+    margin-top: 5px;
 }
 #cuerpo{
     border-style: solid;
     display: inline-block;
     height: auto;
     display: flex;
-    background-color: red
+    background-color: white
 }
 #cambio{
     width: 50%;
     text-align: center;
-    background-color: red;
+    background-color: #CC6E91;
+}
+article{
+    color: rgba(39, 39, 39, 0.904);
+    font-family: "Arial", serif;
+    font-size: 12pt;
 }
 #canvas{
     width: 50%;
+    background-image: url("../imagenes/cielo.png");
+    background-size: cover;
+    background-position: center;
     background-color: #000;
+}
+#canvas .cesium-credit-textContainer{
+    display: none;
 }
 footer{
     margin: auto;
     border-style: solid;
+    border-color: black;
     height: 50px;
-    background-color: green;
+    background-color: #B20949;
+    text-align: center;
+}
+footer>div{
+    display: table;
+    width: 99%;
+    height: 50%;
+}
+footer p{
+    margin: 0;
+    font-family: cursive;
+    font-size: 10pt;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
 }
