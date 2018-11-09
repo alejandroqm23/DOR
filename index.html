@@ -6,84 +6,67 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="estilos/css/estilo.css" />
         <script src="http://www.webglearth.com/v2/api.js"></script>
-        <script>
-      function initialize() {
-        var options = {atmosphere: true, center: [0, 0], zoom: 0};
-        var earth = new WE.map('canvas', options);
-        WE.tileLayer('http://tileserver.maptiler.com/nasa/{z}/{x}/{y}.jpg', {
-          minZoom: 0,
-          maxZoom: 5,
-          attribution: 'NASA'
-        }).addTo(earth);
-      }
-    </script>
+        <script src="estilos/js/code.js"></script>
     </head>
     <body onload="initialize()">
         <div id="box">
             <div id="titulo">
                 <header>
                     <div id="letras"><h1>Machangos Corporation</h1></div>
-                    <div id="logo"><img src="estilos/imagenes/oie_transparent.png" width="25%" height="100%"></div>
+                    <div id="logo"><img src="estilos/imagenes/oie_transparent.png"></div>
                 </header>
                 <nav>
-                    <button class="tablinks" onclick="changeVideo(event, 'Video1')">Video 1</button>
+                    <button class="tablinks" id="defaultOpen" onclick="changeVideo(event, 'Video1')">Video 1</button>
                     <button class="tablinks" onclick="changeVideo(event, 'Video2')">Video 2</button>
                     <button class="tablinks" onclick="changeVideo(event, 'Video3')">Video 3</button>
                 </nav>
             </div>
-            <div id="cuerpo">
-                <div id="cambio">              
-                    <section>
-                        <div id="Video1" class="navContent">
-                            <video width="320" height="240" controls>
-                                <source src="estilos/video/bumblebee.mp4" type="video/mp4">
-                                Tu navegador no soporta la etiqueta de video
-                            </video>
-                            <article>Bumblebee (2018)
-                                 On the run in the year 1987, Bumblebee finds refuge in a junkyard in a small Californian beach town. Charlie, on the cusp of turning 18 and trying to find her place in the world, discovers Bumblebee, battle-scarred and broken.
-                                Director: Travis Knight 
-                            </article>
-                        </div>
-                        <div id="Video2" class="navContent">
-                            <video width="320" height="240" controls>
-                                <source src="estilos/video/ralph%20rompe%20internet.mp4" type="video/mp4">
-                                Tu navegador no soporta la etiqueta de video
-                            </video>
-                            <article>Ralph Breaks the Internet (2018)
-                                 Six years after the events of "Wreck-It Ralph", Ralph and Vanellope, now friends, discover a wi-fi router in their arcade, leading them into a new adventure.
-                                Directors: Phil Johnston, Rich Moore 
-                            </article>
-                        </div>
-                        <div id="Video3" class="navContent">
-                            <video width="320" height="240" controls>
-                                <source src="estilos/video/milla%2022.mp4" type="video/mp4">
-                                Tu navegador no soporta la etiqueta de video
-                            </video>
-                            <article>Mile 22 (2018)
-                                 An elite American intelligence officer, aided by a top-secret tactical command unit, tries to smuggle a mysterious police officer with sensitive information out of the country.
-                                Director: Peter Berg 
-                            </article>
-                        </div>
-                    </section>
-                </div>
-                <div id="canvas"></div>
+            <div id="cuerpo">              
+                <section id="cambio">
+                    <div id="Video1" class="navContent">
+                        <h3>Bumblebee (2018)</h3>
+                        <video controls>
+                            <source src="estilos/video/bumblebee.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video
+                        </video>
+                        <article>
+                                On the run in the year 1987, Bumblebee finds refuge in a junkyard in a small Californian beach town. Charlie, on the cusp of turning 18 and trying to find her place in the world, discovers Bumblebee, battle-scarred and broken.
+                            Director: Travis Knight 
+                        </article>
+                    </div>
+                    <div id="Video2" class="navContent">
+                        <h3>Ralph Breaks the Internet (2018)</h3>
+                        <video controls>
+                            <source src="estilos/video/ralph%20rompe%20internet.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video
+                        </video>
+                        <article>
+                                Six years after the events of "Wreck-It Ralph", Ralph and Vanellope, now friends, discover a wi-fi router in their arcade, leading them into a new adventure.
+                            Directors: Phil Johnston, Rich Moore 
+                        </article>
+                    </div>
+                    <div id="Video3" class="navContent">
+                        <h3>Mile 22 (2018)</h3>
+                        <video controls>
+                            <source src="estilos/video/milla%2022.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video
+                        </video>
+                        <article>
+                                An elite American intelligence officer, aided by a top-secret tactical command unit, tries to smuggle a mysterious police officer with sensitive information out of the country.
+                            Director: Peter Berg 
+                        </article>
+                    </div>
+                </section>
+                <aside id="canvas"></aside>
             </div>
-            <footer></footer>
+            <footer>
+                <div>
+                    <p>Alejandro e Irene</p>
+                </div><div>
+                    <p>CIFP MAJADA MARCIAL</p>
+                </div>
+            </footer>
         </div>
-        <script>
-            function changeVideo(evt, cityName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("navContent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
-        </script>
-            </body>
+        <script src="estilos/js/code2.js"></script>
+    </body>
 </html>
