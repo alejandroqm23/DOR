@@ -6,4 +6,6 @@ function initialize() {
       maxZoom: 5,
       attribution: 'NASA'
     }).addTo(earth);
+    var marker = WE.marker([28.512194, -13.866867]).addTo(earth);
+        marker.bindPopup("<b>Machangos corporation</b><br><span style='font-size:10px;color:#999'>Come see us</span>", {maxWidth: 150, closeButton: true});
   }
