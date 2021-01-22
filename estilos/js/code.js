@@ -1,7 +1,7 @@
 function initialize() {
     var options = {atmosphere: true, center: [0, 0], zoom: 0};
     var earth = new WE.map('canvas', options);
-    WE.tileLayer('https://webglearth.github.io/webglearth2-offline/{z}/{x}/{y}.jpg', {
+    WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       minZoom: 0,
       maxZoom: 5,
       attribution: 'NASA'
